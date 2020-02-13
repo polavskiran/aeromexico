@@ -30,8 +30,7 @@ public class SeleniumRunner {
 		
 			
 		WebElement btnSubmit	=	driver.findElement(By.xpath("//*[@id='flight']/fieldset/div[8]/input"));
-		btnSubmit.click();
-		
+		btnSubmit.click();		
 		driver.quit();
 	}
 }
