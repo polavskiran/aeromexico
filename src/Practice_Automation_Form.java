@@ -13,19 +13,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Practice_Automation_Form {
 
 	static WebDriver	driver;
-	
+
 	public static WebDriver getDriver(String browserName){
 		if(browserName.equalsIgnoreCase("Chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:\\IGT-Selenium\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\Drivers\\chromedriver.exe");
 			driver	=	new ChromeDriver();
-			
-			//return driver;
 		}
 		else if(browserName.equalsIgnoreCase("firefox")){
-			System.setProperty("webdriver.gecko.driver", "D:\\IGT-Selenium\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "E:\\Drivers\\geckodriver.exe");
 			driver	=	new FirefoxDriver();
-			
-			//return driver;
 		}
 		return driver;
 	}
@@ -36,9 +32,9 @@ public class Practice_Automation_Form {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get("http://www.toolsqa.com/automation-practice-form/");
 		driver.manage().window().maximize();
-		
+
 		//Thread.sleep(3000);
-		
+
 		//String pageTitle	=	driver.getTitle();
 		//System.out.println("Page Title is: "+pageTitle);
 
@@ -56,17 +52,17 @@ public class Practice_Automation_Form {
 		WebElement lastName	=	driver.findElement(By.name("lastname"));
 		lastName.clear();
 		lastName.sendKeys("Kumar");
-		
+
 		driver.findElement(By.id("sex-0")).click();
-		
+
 		driver.findElement(By.id("exp-6")).click();
-		
+
 		driver.findElement(By.id("datepicker")).sendKeys("2018/12/19");
-		
+
 		driver.findElement(By.id("profession-1")).click();
-		
+
 		driver.findElement(By.id("tool-2")).click();
-		
+
 		driver.findElement(By.id("submit")).click();
 
 		//driver.quit();
